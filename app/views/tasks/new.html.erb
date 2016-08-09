@@ -1,0 +1,28 @@
+<h1>Tasks#new</h1>
+<p>Find me in app/views/tasks/new.html.erb</p>
+
+<!-- <form action="/tasks" method="post">
+  <label for="description">Description: </label>
+  <input type="text" name="task[description]" id="description">
+
+  <label for="address">Author: </label>
+  <input type="text" name="task[author]" id="author">
+
+  <label for="priority">Priority: </label>
+  <input type="number" name="task[priority]" id="priority">
+
+  <input type="submit">
+</form> -->
+
+
+<%= form_for(@task) do |t| %>
+  <%= t.label :description %>
+  <%= t.text_field :description %>
+
+  <%= t.label :author %>
+  <%= t.text_field :author %>
+
+  <%= t.label :priority %>
+  <%= t.number_field :priority %>
+  <%= t.submit %>
+<% end %>
