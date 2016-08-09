@@ -3,3 +3,5 @@
 
 <h1>DETAIL DE LA TACHE</h1>
 <h1>  <%= "#{@task.id}: #{@task.description} - #{@task.author} (#{@task.priority})" %> </h1>
+
+<%= link_to "Home", "/tasks", method: :get%>

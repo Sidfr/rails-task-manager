@@ -3,7 +3,7 @@
 
 <h1>LISTE DES TACHES</h1>
 <% @tasks.each do |task| %>
-<h2> <%= link_to "Delete", "/tasks/#{task.id}", method: :delete%>
+<h2> <%= link_to "Delete", "/tasks/#{task.id}", method: :delete, data: { confirm: "Are you sure?" }%>
 <%= link_to "Edit", "/tasks/#{task.id}/edit", method: :get%>
 <%= link_to "Show", "/tasks/#{task.id}", method: :get%>
 <%= "#{task.id}: #{task.description} - #{task.author} (#{task.priority})" %> </h2>
